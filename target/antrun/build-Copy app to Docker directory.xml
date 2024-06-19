@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="Copy app to Docker directory"  >
+<target name="Copy app to Docker directory">
+  <copy todir="D:\verteilte\githope\template-exam03/src/test/docker">
+    <fileset includes="*.war" dir="D:\verteilte\githope\template-exam03/target/"></fileset>
+    <mapper from=".*" to="demo.war" type="regexp"/>
+  </copy>
+</target>
+</project>
